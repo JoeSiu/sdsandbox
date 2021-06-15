@@ -49,6 +49,8 @@ public class CarPath
         }
 
         iActiveSpan = minDistanceIndex;
+
+        Debug.Log("called GetClosestSpan, iActiveSpan = " + iActiveSpan);
     }
 
     public PathNode GetActiveNode()

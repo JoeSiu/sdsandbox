@@ -241,6 +241,7 @@ namespace tk
                     }
                 }
             }
+            Debug.Log("sented msg");
             client.SendMsg(json);
         }
 

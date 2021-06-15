@@ -337,7 +337,7 @@ public class Logger : MonoBehaviour {
 			{
 				ImageSaveJob ij = imagesToSave[0];
 
-                //Debug.Log("saving: " + ij.filename);
+                Debug.Log("saving: " + ij.filename);
 
                 File.WriteAllBytes(ij.filename, ij.bytes);
 
