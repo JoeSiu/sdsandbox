@@ -49,8 +49,6 @@ public class CarPath
         }
 
         iActiveSpan = minDistanceIndex;
-
-        Debug.Log("called GetClosestSpan, iActiveSpan = " + iActiveSpan);
     }
 
     public PathNode GetActiveNode()
@@ -173,4 +171,18 @@ public class CarPath
         }
         return bounds;
     }
+
+    public float GetCarFacingAngle(Transform car)
+    {
+        PathNode nextNode = nodes[iActiveSpan + 1];
+
+        Vector3 targetDir = nextNode.pos - car.position;
+        float angle = Vector3.Angle(targetDir, car.forward);
+
+        Debug.DrawLine(car.position, nextNode.pos, Color.blue);
+
+        Debug.Log("angle = " + angle);
+        return angle;
+    }
+
 }

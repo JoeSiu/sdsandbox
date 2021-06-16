@@ -193,11 +193,18 @@ namespace tk
                     pm.carPath.ResetActiveSpan(false);
                 }
 
-                if (GlobalState.extendedTelemetry) { json.AddField("cte", cte); }
+                if (GlobalState.extendedTelemetry)
+                {
+                    json.AddField("cte", cte);
+
+                    // get car direction
+                    json.AddField("carFacingAngle", pm.carPath.GetCarFacingAngle(tm));
+                }
 
                 // need to refactor this to be relative to the car
                 json.AddField("activeNode", pm.carPath.iActiveSpan);
                 json.AddField("totalNodes", pm.carPath.nodes.Count);
+
             }
 
             // not intended to use in races, just to train 
