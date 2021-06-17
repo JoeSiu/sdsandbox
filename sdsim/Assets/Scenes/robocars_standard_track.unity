@@ -212,10 +212,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29577337}
-  - component: {fileID: 29577339}
   - component: {fileID: 29577338}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: DayNightCyclePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,10 +236,10 @@ RectTransform:
   m_Father: {fileID: 1125639058}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.21300001}
-  m_AnchorMax: {x: 0.254, y: 0.7028608}
-  m_AnchoredPosition: {x: -80.65344, y: 262}
-  m_SizeDelta: {x: -185.43994, y: -529.3331}
+  m_AnchorMin: {x: 0, y: 0.20500001}
+  m_AnchorMax: {x: 0.25300002, y: 0.70552886}
+  m_AnchoredPosition: {x: -79.65369, y: 265}
+  m_SizeDelta: {x: -183.43994, y: -541.3331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29577338
 MonoBehaviour:
@@ -256,66 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIGroup:
   - {fileID: 3526026337309573563}
---- !u!114 &29577339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29577336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 229098589}
-  toggleTransition: 1
-  graphic: {fileID: 749540426}
-  m_Group: {fileID: 0}
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 29577338}
-        m_TargetAssemblyTypeName: CollapsibleUI, Assembly-CSharp
-        m_MethodName: ToggleUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_IsOn: 1
 --- !u!1 &62167532
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.18900001}
   m_AnchorMax: {x: 0.94247055, y: 0.35500002}
-  m_AnchoredPosition: {x: 10.5, y: -10.405579}
+  m_AnchoredPosition: {x: 10.5, y: -10.405563}
   m_SizeDelta: {x: -159, y: -57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154292618
@@ -741,7 +680,7 @@ GameObject:
   - component: {fileID: 229098590}
   - component: {fileID: 229098589}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3655,7 +3594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.043177996}
   m_AnchorMax: {x: 0.95541185, y: 0.18900001}
-  m_AnchoredPosition: {x: 7.5, y: -10.784912}
+  m_AnchoredPosition: {x: 7.5, y: -10.784851}
   m_SizeDelta: {x: -165, y: -45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615365329
@@ -3976,7 +3915,7 @@ PrefabInstance:
     - target: {fileID: 8831586220000574608, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.3001099
+      value: -1.3001251
       objectReference: {fileID: 0}
     - target: {fileID: 8831700883163485240, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
@@ -4201,7 +4140,7 @@ PrefabInstance:
     - target: {fileID: 8832023931900768513, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.4998169
+      value: 1.4998779
       objectReference: {fileID: 0}
     - target: {fileID: 8832090778548077794, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
@@ -4256,7 +4195,7 @@ PrefabInstance:
     - target: {fileID: 8832198224507408213, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.20018768
+      value: 0.20019722
       objectReference: {fileID: 0}
     - target: {fileID: 8832391719374315553, guid: 823d0c7739d3ffc4da1466e8dd61ca67,
         type: 3}
@@ -4371,8 +4310,9 @@ GameObject:
   - component: {fileID: 1710417347}
   - component: {fileID: 1710417349}
   - component: {fileID: 1710417348}
+  - component: {fileID: 1710417350}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TogglePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4396,8 +4336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 77.775185, y: -11.5576}
-  m_SizeDelta: {x: 181.6924, y: 36.8707}
+  m_AnchoredPosition: {x: 81.841, y: -11.557587}
+  m_SizeDelta: {x: 189.8241, y: 36.8707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710417348
 MonoBehaviour:
@@ -4437,6 +4377,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710417346}
   m_CullTransparentMesh: 1
+--- !u!114 &1710417350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710417346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 229098589}
+  toggleTransition: 1
+  graphic: {fileID: 749540426}
+  m_Group: {fileID: 0}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 29577338}
+        m_TargetAssemblyTypeName: CollapsibleUI, Assembly-CSharp
+        m_MethodName: ToggleUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 1
 --- !u!1 &1752150142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,7 +5250,7 @@ GameObject:
   - component: {fileID: 3566644289963899743}
   - component: {fileID: 3526026337309573564}
   m_Layer: 5
-  m_Name: DayNightCyclePanel
+  m_Name: MainPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
