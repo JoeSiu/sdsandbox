@@ -228,34 +228,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366068548583675989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdc26ab10528844349c9664ee6d07b12, type: 3}
+  m_Script: {fileID: 11500000, guid: 252ecc348759643669babfd05f117ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayNightCycleUI: {fileID: 0}
   enable: 1
   currentTime: 9
+  startTime: 0
+  endTime: 24
   sun:
     lightObject: {fileID: 1366068547941918831}
     lightColor:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0.8944372, b: 0.7216981, a: 1}
-      key2: {r: 1, g: 0.96351707, b: 0.8443396, a: 0}
-      key3: {r: 1, g: 0.62498116, b: 0, a: 0}
+      key1: {r: 1, g: 0.53394943, b: 0, a: 1}
+      key2: {r: 0.990566, g: 0.9179717, b: 0.6868548, a: 1}
+      key3: {r: 0.745283, g: 0.38758942, b: 0.0738252, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
+      ctime0: 6554
       ctime1: 16384
       ctime2: 32768
       ctime3: 49151
-      ctime4: 65535
+      ctime4: 58982
       ctime5: 0
       ctime6: 0
       ctime7: 0
       atime0: 0
       atime1: 65535
-      atime2: 0
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -270,17 +273,17 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 3.0000005
-        outSlope: 3.0000005
+        inSlope: 3
+        outSlope: 3
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.49999994
+        time: 0.5
         value: 1.5
-        inSlope: 0.00000035762787
-        outSlope: 0.00000035762787
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -288,8 +291,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: -2.9999998
-        outSlope: -2.9999998
+        inSlope: -3
+        outSlope: -3
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -301,19 +304,19 @@ MonoBehaviour:
     lightObject: {fileID: 1366068548449790094}
     lightColor:
       serializedVersion: 2
-      key0: {r: 0.5424528, g: 0.6767559, b: 1, a: 1}
+      key0: {r: 0, g: 0.46489573, b: 1, a: 1}
       key1: {r: 0, g: 0, b: 0, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0.46666667, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0.54509807, g: 0.6784314, b: 1, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 16384
-      ctime2: 32768
-      ctime3: 49151
-      ctime4: 65535
+      ctime0: 6554
+      ctime1: 32768
+      ctime2: 58982
+      ctime3: 0
+      ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -326,16 +329,16 @@ MonoBehaviour:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 5
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     lightIntensity:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.5
-        inSlope: -1
-        outSlope: -1
+        value: 0.25
+        inSlope: -0.5
+        outSlope: -0.5
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
@@ -351,9 +354,9 @@ MonoBehaviour:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.5
-        inSlope: 1
-        outSlope: 1
+        value: 0.25
+        inSlope: 0.5
+        outSlope: 0.5
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -361,5 +364,5 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  angle: 250
+  angle: 0
   speed: 0.01
