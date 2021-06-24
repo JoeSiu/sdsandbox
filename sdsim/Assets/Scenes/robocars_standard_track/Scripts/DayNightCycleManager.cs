@@ -19,31 +19,39 @@ public class DayNightCycleManager : MonoBehaviour
             lightComponent = lightObject.GetComponent<Light>();
         }
 
-        public void SetLight(float normalizedTime)
+        public void SetLight(float normalizedTime, float multiplier = 1.0f)
         {
             lightComponent.color = lightColor.Evaluate(normalizedTime);
-            lightComponent.intensity = lightIntensity.Evaluate(normalizedTime);
+            lightComponent.intensity = lightIntensity.Evaluate(normalizedTime) * multiplier;
         }
     }
 
     [Header("Controller Settings")]
     public DayNightCycleManagerUI dayNightCycleUI;
     public bool enable = true;
-    [Tooltip("Time of day in 24 hour format")]
+    [Tooltip("Time of day")]
     [Range(0, 24)] public float currentTime = 9.0f;
     public float startTime = 0.0f;
     public float endTime = 24.0f;
     public Lighting sun;
     public Lighting moon;
-    [Tooltip("Sun's angle")]
+    [Tooltip("Lights's angle")]
     [Range(0, 360)] public float angle = 0;
-    [Tooltip("Sun's rotation speed")]
+    [Tooltip("Lights's rotation speed")]
     public float speed = 0.01f;
+
+    [HideInInspector]
+    public float sunStrengthMultiplier;
+    [HideInInspector]
+    public float moonStrengthMultiplier;
 
     private void Awake()
     {
         sun.Init();
         moon.Init();
+
+        sunStrengthMultiplier = 1.0f;
+        moonStrengthMultiplier = 1.0f;
 
         if (dayNightCycleUI)
             dayNightCycleUI.manager = this;
@@ -53,8 +61,8 @@ public class DayNightCycleManager : MonoBehaviour
     {
         Tick();
 
-        sun.SetLight(NormalizedTime(currentTime));
-        moon.SetLight(NormalizedTime(currentTime));
+        sun.SetLight(NormalizedTime(currentTime), sunStrengthMultiplier);
+        moon.SetLight(NormalizedTime(currentTime), moonStrengthMultiplier);
 
         SetRotation(currentTime);
 

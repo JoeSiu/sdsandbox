@@ -11,6 +11,7 @@ public class TrackManagerUI : MonoBehaviour
    [Header("UI Settings")]
     public Button prevButton;
     public Button nextButton;
+    public Text currentIndexText;
 
      private void Awake()
     {
@@ -36,5 +37,10 @@ public class TrackManagerUI : MonoBehaviour
         {
             Debug.LogWarning("No day track manager in scene!");
         }
+    }
+
+     public void UpdateUI(int index)
+    {
+        currentIndexText.text = "Current track index: " + index;
     }
 }

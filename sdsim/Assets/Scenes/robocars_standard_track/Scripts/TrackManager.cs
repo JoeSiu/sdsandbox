@@ -47,7 +47,6 @@ public class TrackManager : MonoBehaviour
         track.rotation = newTransform.rotation;
         track.localScale = newTransform.localScale;
 
-
         // Hacky way of force reset car
         var car = GameObject.FindObjectOfType<Car>().GetComponent<Car>();
         Transform start = track.transform.Find("donkey_start");
@@ -59,6 +58,10 @@ public class TrackManager : MonoBehaviour
         pathManager.pathCreator = track.GetComponentInChildren<PathCreator>();
         pathManager.InitCarPath();
         pathManager.carPath.GetClosestSpan(start.position);
+
+        // Update UI
+        if (trackManagerUI)
+        trackManagerUI.UpdateUI(trackIndex);
     }
 
 }
