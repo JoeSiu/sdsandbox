@@ -2,30 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-[System.Serializable]
-public struct SliderWithText
-{
-    public Slider sliderObject;
-    public Text textObject;
-
-    public float Value
-    {
-        get { return sliderObject.value; }
-        set { sliderObject.value = value; }
-    }
-
-    public string Text
-    {
-        get { return textObject.text; }
-        set { textObject.text = value; }
-    }
-}
+using UIHelper;
 
 public class DayNightCycleManagerUI : MonoBehaviour
 {
-
-    [HideInInspector]
     public DayNightCycleManager manager;
 
     [Header("UI Settings")]
@@ -38,10 +18,11 @@ public class DayNightCycleManagerUI : MonoBehaviour
     public SliderWithText sunStrengthMultiplier;
     public SliderWithText moonStrengthMultiplier;
 
-    private void Start()
+    private void OnEnable()
     {
         if (manager != null)
         {
+            // Add listeners for each UI items
             enableCycleToggle.onValueChanged.AddListener(delegate { ToggleHandler(); });
             currentTime.sliderObject.onValueChanged.AddListener(delegate { SliderHandler(0); });
             startTime.sliderObject.onValueChanged.AddListener(delegate { SliderHandler(1); });
@@ -88,6 +69,11 @@ public class DayNightCycleManagerUI : MonoBehaviour
                 manager.moonStrengthMultiplier = moonStrengthMultiplier.Value;
                 break;
         }
+    }
+
+    private void Update()
+    {
+        UpdateUI();
     }
 
     public void UpdateUI()

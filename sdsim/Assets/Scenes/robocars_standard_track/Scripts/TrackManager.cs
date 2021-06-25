@@ -6,21 +6,16 @@ using PathCreation;
 
 public class TrackManager : MonoBehaviour
 {
-    public TrackManagerUI trackManagerUI;
-
     [Header("Track Settings")]
     public PathManager pathManager;
     public Transform track;
     public List<Transform> trackTransforms;
 
-    private int trackIndex;
+    public int trackIndex;
 
     private void Awake()
     {
         trackIndex = 0;
-
-        if (trackManagerUI)
-            trackManagerUI.manager = this;
     }
 
     private void Start()
@@ -37,31 +32,30 @@ public class TrackManager : MonoBehaviour
 
         if (trackIndex > trackTransforms.Count - 1)
             trackIndex = 0;
-            
+
         return trackTransforms[trackIndex];
     }
 
     public void SetTrack(Transform newTransform)
     {
+        // Set the track to a new position
         track.position = newTransform.position;
         track.rotation = newTransform.rotation;
         track.localScale = newTransform.localScale;
 
-        // Hacky way of force reset car
-        var car = GameObject.FindObjectOfType<Car>().GetComponent<Car>();
+        // Hacky way of force reset all cars
+        CarSpawner carSpawner = CarSpawner.FindObjectOfType<CarSpawner>();
         Transform start = track.transform.Find("donkey_start");
-        car.startPos = start.position;
-        car.startRot = start.rotation;
-        car.RestorePosRot();
+        foreach (var car in Car.FindObjectsOfType<Car>())
+        {
+            car.startPos = start.position;
+            car.startRot = start.rotation;
+            car.Set(carSpawner.GetCarStartPosRot().Item1, carSpawner.GetCarStartPosRot().Item2);
+        }
 
         // Reset current active span
         pathManager.pathCreator = track.GetComponentInChildren<PathCreator>();
         pathManager.InitCarPath();
         pathManager.carPath.GetClosestSpan(start.position);
-
-        // Update UI
-        if (trackManagerUI)
-        trackManagerUI.UpdateUI(trackIndex);
     }
-
 }

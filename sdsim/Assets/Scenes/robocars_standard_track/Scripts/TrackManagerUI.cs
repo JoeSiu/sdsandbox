@@ -5,42 +5,44 @@ using UnityEngine.UI;
 
 public class TrackManagerUI : MonoBehaviour
 {
-    [HideInInspector]
     public TrackManager manager;
 
-   [Header("UI Settings")]
+    [Header("UI Settings")]
     public Button prevButton;
     public Button nextButton;
     public Text currentIndexText;
 
-     private void Awake()
+    private void OnEnable()
     {
-        prevButton.onClick.AddListener(delegate { ButtonHandler(0); });
-        nextButton.onClick.AddListener(delegate { ButtonHandler(1); });
-    }
-
-     private void ButtonHandler(int idx_)
-    {
+        // Add listeners for each UI items
         if (manager != null)
         {
-            switch (idx_)
-            {
-                case 0:
-                    manager.SetTrack(manager.GetTransform(-1));
-                    break;
-                case 1:
-                    manager.SetTrack(manager.GetTransform(1));
-                    break;
-            }
+            prevButton.onClick.AddListener(delegate { ButtonHandler(0); });
+            nextButton.onClick.AddListener(delegate { ButtonHandler(1); });
         }
         else
         {
-            Debug.LogWarning("No day track manager in scene!");
+            Debug.LogWarning("No track manager in scene!");
         }
     }
 
-     public void UpdateUI(int index)
+    private void ButtonHandler(int idx_)
     {
-        currentIndexText.text = "Current track index: " + index;
+        switch (idx_)
+        {
+            case 0:
+                manager.SetTrack(manager.GetTransform(-1));
+                break;
+            case 1:
+                manager.SetTrack(manager.GetTransform(1));
+                break;
+        }
+
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        currentIndexText.text = "Current track index: " + manager.trackIndex;
     }
 }

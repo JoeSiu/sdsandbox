@@ -1595,7 +1595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c82dff0b851484681b7e0bd9af7459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomBackgroundUI: {fileID: 8366095256924647167}
   enable: 1
   speed: 0.01
   defaultSky: {fileID: 2100000, guid: 38858c317097bed45bea24475973a3a5, type: 2}
@@ -4146,7 +4145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9f735363c4f4d2a957c48d81735ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1570093608}
   enableRandomBGToggle: {fileID: 5618447968951498567}
   speed:
     sliderObject: {fileID: 1980522443877539831}

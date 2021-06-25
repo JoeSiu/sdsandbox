@@ -6,13 +6,13 @@ using UnityEngine;
 public class DayNightCycleManager : MonoBehaviour
 {
     [System.Serializable]
-    public class Lighting
+    public struct Lighting
     {
         public GameObject lightObject;
         public Gradient lightColor;
         public AnimationCurve lightIntensity;
 
-        private Light lightComponent;
+        public Light lightComponent;
 
         public void Init()
         {
@@ -27,7 +27,6 @@ public class DayNightCycleManager : MonoBehaviour
     }
 
     [Header("Controller Settings")]
-    public DayNightCycleManagerUI dayNightCycleUI;
     public bool enable = true;
     [Tooltip("Time of day")]
     [Range(0, 24)] public float currentTime = 9.0f;
@@ -53,8 +52,8 @@ public class DayNightCycleManager : MonoBehaviour
         sunStrengthMultiplier = 1.0f;
         moonStrengthMultiplier = 1.0f;
 
-        if (dayNightCycleUI)
-            dayNightCycleUI.manager = this;
+        // Set the sun source in the environment tab to this sun
+        RenderSettings.sun = sun.lightComponent;
     }
 
     private void Update()
@@ -65,9 +64,6 @@ public class DayNightCycleManager : MonoBehaviour
         moon.SetLight(NormalizedTime(currentTime), moonStrengthMultiplier);
 
         SetRotation(currentTime);
-
-        if (dayNightCycleUI)
-            dayNightCycleUI.UpdateUI();
     }
 
     private void Tick()

@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UIHelper;
 
 public class RandomBackgroundUI : MonoBehaviour
 {
-    [HideInInspector]
     public RandomBackground manager;
 
     [Header("UI Settings")]
     public Toggle enableRandomBGToggle;
     public SliderWithText speed;
 
-    private void Start()
+    private void OnEnable()
     {
         if (manager != null)
         {
@@ -29,10 +29,7 @@ public class RandomBackgroundUI : MonoBehaviour
 
     private void ToggleHandler()
     {
-        if (enableRandomBGToggle.isOn)
-            manager.StartRandomBackground();
-        else
-            manager.CancelRandomBackground();
+        manager.enable = enableRandomBGToggle.isOn;
     }
 
     private void SliderHandler(int idx_)
@@ -41,8 +38,7 @@ public class RandomBackgroundUI : MonoBehaviour
         {
             case 0:
                 manager.speed = speed.Value;
-                manager.CancelRandomBackground();
-                manager.StartRandomBackground();
+                manager.ReloadRandomBackground();
                 UpdateUI();
                 break;
         }

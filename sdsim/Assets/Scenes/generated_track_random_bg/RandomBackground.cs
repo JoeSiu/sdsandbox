@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class RandomBackground : MonoBehaviour
 {
-    public RandomBackgroundUI randomBackgroundUI;
-
     public bool enable = true;
 
     public float speed = 0.1f;
@@ -18,16 +16,25 @@ public class RandomBackground : MonoBehaviour
 
     private void Awake()
     {
-        if (randomBackgroundUI)
-            randomBackgroundUI.manager = this;
-
         StartRandomBackground();
+    }
+
+    private void Update()
+    {
+        if (enable && !IsInvoking("SetRandomBackground"))
+        {
+            StartRandomBackground();
+        }
+        else if (!enable && IsInvoking("SetRandomBackground"))
+        {
+            CancelRandomBackground();
+        }
     }
 
     public void StartRandomBackground()
     {
         RenderSettings.skybox = HDRISky;
-        InvokeRepeating("SetRandomBackground", 0, speed);
+        InvokeRepeating("SetRandomBackground", speed, speed);
     }
 
     public void CancelRandomBackground()
@@ -36,8 +43,15 @@ public class RandomBackground : MonoBehaviour
         CancelInvoke("SetRandomBackground");
     }
 
+    public void ReloadRandomBackground()
+    {
+        CancelRandomBackground();
+        StartRandomBackground();
+    }
+
     void SetRandomBackground()
     {
         RenderSettings.skybox.mainTexture = Skys[Random.Range(0, Skys.Count)];
+        Debug.Log("called");
     }
 }
