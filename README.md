@@ -1,5 +1,5 @@
 # Changes in this repo
-## New maps: 
+## New maps
 ### robocars_standard_track
 
 With a day night cycle setting and 4 different position/rotation for the track
@@ -11,6 +11,10 @@ With a day night cycle setting and 4 different position/rotation for the track
 Modified generated_track with a random changing background (flickering warning)
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/_HU5YTVqcFQ/0.jpg)](https://youtu.be/_HU5YTVqcFQ "generated track random bg")
+
+## Other changes
+
+- Added a "carFacingAngle" which returns the car's facing angle to the next segment of the track (a float value from 0 to 180), so if its facing the right direction it will return a small value, while if the car is facing backward then it will return ~180
 
 
 # SdSandbox
