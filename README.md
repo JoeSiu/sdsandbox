@@ -1,12 +1,14 @@
 # Changes in this repo
 ## New maps: 
-robocars_standard_track: with a day night cycle setting and 4 different position/rotation for the track
+### robocars_standard_track
+
+With a day night cycle setting and 4 different position/rotation for the track
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/YpLMsGqXAYs/0.jpg)](https://youtu.be/YpLMsGqXAYs "robocars standard track")
 
-generated_track_random_bg: modified generated_track with a random changing background 
+### generated_track_random_bg
 
-(flickering warning)
+Modified generated_track with a random changing background (flickering warning)
 
 [![IMAGE ALT TEXT](https://img.youtube.com/vi/_HU5YTVqcFQ/0.jpg)](https://youtu.be/_HU5YTVqcFQ "generated track random bg")
 
