@@ -1,0 +1,72 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandomMatColor : MonoBehaviour
+{
+    public bool enable = true;
+    public float speed = 0.01f;
+
+    [Header("Random HSV Settings")]
+    public bool enableHue = true;
+    public float hueMin = 0f;
+    public float hueMax = 1f;
+    public bool enableSaturation = true;
+    public float saturationMin = 0f;
+    public float saturationMax = 1f;
+    public bool enableValue = true;
+    public float valueMin = 0f;
+    public float valueMax = 1f;
+    public bool enableAlpha = true;
+    public float alphaMin = 0f;
+    public float alphaMax = 1f;
+
+    private Material _mat;
+    private float _startH, _startS, _startV;
+
+    private void Awake()
+    {
+        _mat = GetComponent<Renderer>().material;
+        Color.RGBToHSV(_mat.color, out _startH, out _startS, out _startV);
+        Debug.Log("Game Obj: " + gameObject.name + ", H: " + _startH + " S: " + _startS + " V: " + _startV);
+        StartCoroutine(SetRandomMatColor());
+    }
+
+    IEnumerator SetRandomMatColor()
+    {
+        while (true)
+        {
+            if (enable)
+            {
+                Color newColor;
+                float H = _startH;
+                float S = _startS;
+                float V = _startV;
+                float A = 1f;
+
+                if (enableHue)
+                    H = Random.Range(hueMin, hueMax);
+
+                if (enableSaturation)
+                    S = Random.Range(saturationMin, saturationMax);
+
+                if (enableValue)
+                    V = Random.Range(valueMin, valueMax);
+
+                if (enableAlpha)
+                    A = Random.Range(alphaMin, alphaMax);
+
+                newColor = Color.HSVToRGB(H, S, V);
+                newColor.a = A;
+
+                _mat.color = newColor;
+
+                yield return new WaitForSeconds(speed);
+            }
+            else
+            {
+                yield return null;
+            }
+        }
+    }
+}

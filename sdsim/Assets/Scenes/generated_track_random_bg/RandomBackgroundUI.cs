@@ -38,7 +38,7 @@ public class RandomBackgroundUI : MonoBehaviour
         {
             case 0:
                 manager.speed = speed.Value;
-                manager.ReloadRandomBackground();
+                // manager.ReloadRandomBackground();
                 UpdateUI();
                 break;
         }

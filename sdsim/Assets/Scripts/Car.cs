@@ -76,7 +76,7 @@ public class Car : MonoBehaviour, ICar {
 	{
 		requestTorque = val;
 		requestBrake = 0f;
-		//Debug.Log("request throttle: " + val);
+		// Debug.Log("request throttle: " + val);
 	}
 
     public void SetMaxSteering(float val)

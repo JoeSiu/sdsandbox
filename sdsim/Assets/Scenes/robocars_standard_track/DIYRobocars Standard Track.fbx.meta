@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 15997b311dfb240cbbac62750d22c4e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BottomWall
     second: {fileID: 2100000, guid: 879c99fa07e2e4a209ff165165a2c18a, type: 2}
   - first:
@@ -43,7 +48,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SideRedWallWindow
-    second: {fileID: 2100000, guid: 1595636ead0434d7ca641c5dd792737f, type: 2}
+    second: {fileID: 2100000, guid: afd0ced6dd8034f18b06c287e51b3d81, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -62,6 +67,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: WhitePlastic
+    second: {fileID: 2100000, guid: 4997dfac1b277434fba75c865500ba70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Window Frame
     second: {fileID: 2100000, guid: f7ec98d543b8c4305adf7f5574826c66, type: 2}
   - first:
@@ -73,12 +83,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WindowBackGlass
-    second: {fileID: 2100000, guid: 1595636ead0434d7ca641c5dd792737f, type: 2}
+    second: {fileID: 2100000, guid: 8167b4cb9e8344fa8a98c1f19a023a91, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: YellowLine
     second: {fileID: 2100000, guid: 017ff08a3c6c740d1a37a51b6ca7a5f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7cdaf8a973502964290d34a88a5634cf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -109,7 +124,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 7.5
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
@@ -160,7 +175,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
+    globalScale: 0.074999996
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

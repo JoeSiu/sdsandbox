@@ -16,42 +16,29 @@ public class RandomBackground : MonoBehaviour
 
     private void Awake()
     {
-        StartRandomBackground();
+        StartCoroutine(SetRandomBackground());
     }
 
-    private void Update()
+    IEnumerator SetRandomBackground()
     {
-        if (enable && !IsInvoking("SetRandomBackground"))
+        while (true)
         {
-            StartRandomBackground();
+            if (enable)
+            {
+                if (RenderSettings.skybox != HDRISky)
+                    RenderSettings.skybox = HDRISky;
+
+                RenderSettings.skybox.mainTexture = Skys[Random.Range(0, Skys.Count)];
+                RenderSettings.skybox.SetFloat("_Rotation", Random.Range(0, 360));
+                yield return new WaitForSeconds(speed);
+            }
+            else
+            {
+                if (RenderSettings.skybox != defaultSky)
+                    RenderSettings.skybox = defaultSky;
+
+                yield return null;
+            }
         }
-        else if (!enable && IsInvoking("SetRandomBackground"))
-        {
-            CancelRandomBackground();
-        }
-    }
-
-    public void StartRandomBackground()
-    {
-        RenderSettings.skybox = HDRISky;
-        InvokeRepeating("SetRandomBackground", speed, speed);
-    }
-
-    public void CancelRandomBackground()
-    {
-        RenderSettings.skybox = defaultSky;
-        CancelInvoke("SetRandomBackground");
-    }
-
-    public void ReloadRandomBackground()
-    {
-        CancelRandomBackground();
-        StartRandomBackground();
-    }
-
-    void SetRandomBackground()
-    {
-        RenderSettings.skybox.mainTexture = Skys[Random.Range(0, Skys.Count)];
-        Debug.Log("called");
     }
 }
