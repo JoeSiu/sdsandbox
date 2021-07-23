@@ -1,20 +1,19 @@
-# Simulator training
+# Simulator training <!-- omit in toc -->
 
 [view on github page](https://joesiu.github.io/sdsandbox/)
 
-## Introducion
+## Introduction <!-- omit in toc -->
 
 I have been testing if it is possible to train a model inside the simulator and use that model in real life, and here are my results for different scenarios.
 
-- [Simulator training](#simulator-training)
-  - [Introducion](#introducion)
-  - [Simulator environment 1: Outdoor area](#simulator-environment-1-outdoor-area)
-    - [Training method](#training-method)
-    - [Version 1 (static lighting)](#version-1-static-lighting)
-    - [Version 2 (dynamic lighting)](#version-2-dynamic-lighting)
-    - [Conclusion](#conclusion)
-  - [Simulator environment 2: Robocarstore standard track](#simulator-environment-2-robocarstore-standard-track)
-    - [Training method](#training-method-1)
+- [Simulator environment 1: Outdoor area](#simulator-environment-1-outdoor-area)
+  - [Training method](#training-method)
+  - [Version 1 (static lighting)](#version-1-static-lighting)
+  - [Version 2 (dynamic lighting)](#version-2-dynamic-lighting)
+  - [Conclusion](#conclusion)
+- [Simulator environment 2: Robocarstore standard track](#simulator-environment-2-robocarstore-standard-track)
+  - [Training method](#training-method-1)
+  - [Version 1](#version-1)
 
 ## Simulator environment 1: Outdoor area
 
@@ -91,3 +90,6 @@ The second environment will be the Robocarstore's standard track, which I wish t
 <img src="assets/robocarstore_standard_track.png" width="650" height="420"/>
 
 ### Training method
+
+
+### Version 1
