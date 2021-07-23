@@ -3,13 +3,18 @@
 ## Simulator environment
 
 I have been trying to test if it is possible to train a model inside the simulator and use that model in real life. With that, I have created a new 3d environment for the area outside our office where I can test the donkey car.
-![enter image description here](assets/img_001.jpeg)
 
-![enter image description here](assets/img_002.png)
+*Real life location*
+
+<img src="assets/img_001.jpeg" width="650" height="350" />
+
+*Simulator environment*
+
+<img src="assets/img_002.png" width="650" height="350" />
 
 Being a outdoor environment, the sun will be constantly moving, so in order to match the simulator lighting with real world lighting, I have make a simple day night cycle effect which allows me to adjust the sun's angle before testing.
 
-![enter image description here](assets/vid_001.gif)
+<img src="assets/vid_001.gif" width="650" height="350" />
 
 ## Training process
 
@@ -21,14 +26,19 @@ In this version, I tried to match the simulator lighting to the real world light
 
 **Simulator result:**
 
-![enter image description here](assets/vid_002.gif)
+<img src="assets/vid_002.gif">
+
 
 **Simulator result with salient map:**
 
-![enter image description here](assets/vid_003.gif)
+<img src="assets/vid_003.gif">
 
 **Real life result:**
 
-https://user-images.githubusercontent.com/38518793/126746319-7bb8c40c-459e-41d7-9bca-86c3a11fbad1.mp4
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vS7hcChmkJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 The car seems to be able to detect features from the simulator in real life and is able to turn left when close to the blue wall, however, for the second turn, the result are less ideal, instead of a sharp left turn, the car performs a gentle left turn, making it go off the intended paths and crashes at the end.
+
+### Version 2 (dynamic lighting)
+
