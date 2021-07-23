@@ -4,11 +4,11 @@
 
 I have been trying to test if it is possible to train a model inside the simulator and use that model in real life. With that, I have created a new 3d environment for the area outside our office where I can test the donkey car.
 
-*Real life location*
+**Real life location:**
 
 <img src="assets/img_001.jpeg" width="650" height="350" />
 
-*Simulator environment*
+**Simulator environment:**
 
 <img src="assets/img_002.png" width="650" height="350" />
 
