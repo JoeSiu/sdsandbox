@@ -1,0 +1,26 @@
+*.pyc
+*.h5
+sdsim/obj
+*.sln
+*.userprefs
+sdsim/Temp
+*.csproj
+sdsim/.vs
+sdsim/Build
+dataset
+sdsim/Assets/Town Creator Kit V2
+sdsim/Library
+sdsim/Packages
+sdsim/ProjectSettings
+sdsim/Logs
+/debug.log
+/camera_a.png
+/camera_b.png
+/sdsim/.vscode
+/sdsim/Assets/AssetBundles
+/sdsim/Builds
+/src/camera_a.png
+/src/camera_b.png
+/sdsim/UIElementsSchema
+/sdsim/log.tar.gz
+/sdsim/log
