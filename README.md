@@ -42,3 +42,15 @@ The car seems to be able to detect features from the simulator in real life and 
 
 ### Version 2 (dynamic lighting)
 
+Besides training using a static lighting, I also tried to test if its possible to create a more universal model where it can adopt to different lighting conditions. So I trained another model where the lighting are constantly changing at a high speed.
+
+**Simulator result:**
+
+<img src="assets/vid_002.gif">
+
+
+**Simulator result with salient map:**
+
+<img src="assets/vid_003.gif">
+
+**Real life result:**
