@@ -91,4 +91,3 @@ The second environment will be the Robocarstore's standard track, which I wish t
 <img src="assets/robocarstore_standard_track.png" width="650" height="420"/>
 
 ### Training method
-
