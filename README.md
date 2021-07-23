@@ -20,8 +20,10 @@ In this version, I tried to match the simulator lighting to the real world light
 
 **Simulator result:**
 ![enter image description here](assets/vid_002.gif)
+
 **Simulator result with salient map:**
 ![enter image description here](assets/vid_003.gif)
+
 **Real life result:**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vS7hcChmkJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
