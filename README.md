@@ -24,6 +24,11 @@ Being a outdoor environment, the sun will be constantly moving, so in order to m
 
 As the goal is to see if a model trained with the simulator can be used in real life, I decided to create a simple model where the car would drive in a rectangle shape and turn left in each corners. I am using manual drive mode and collected ~20000 images inside the simulator, then train it in Google Colab.
 
+Before testing out the simulator model, I trained a real life version first for reference:
+<img src="assets/real_ref.gif">
+
+<img src="assets/real_ref_salient.gif">
+
 ### Version 1 (static lighting)
 
 In this version, I tried to match the simulator lighting to the real world lighting (cloudy)
@@ -41,7 +46,7 @@ In this version, I tried to match the simulator lighting to the real world light
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vS7hcChmkJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The car seems to be able to detect features from the simulator in real life and is able to turn left when close to the blue wall, however, for the second turn, the result are less ideal, instead of a sharp left turn, the car performs a gentle left turn, making it go off the intended paths and crashes at the end.
+The car seems to be able to detect features from the simulator in real life and is able to turn left when close to the blue wall, however, for the second corner, the result are less ideal, instead of a sharp left turn, the car performs a gentle left turn, making it go off the intended paths and crashes at the end.
 
 ### Version 2 (dynamic lighting)
 
@@ -57,6 +62,6 @@ Besides training using a static lighting, I also tried to test if its possible t
 
 **Real life result:**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vS7hcChmkJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8JHAZ7E5iOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Unfortunately, the model seems isn't working as intended.
+Unfortunately, the model seems isn't working as intended. Most of the time the car either stay still or will crash into the wall. While it is still able to detect some features like the wall or background, the result looks unstable compare to version 1.
