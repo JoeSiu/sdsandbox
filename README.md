@@ -97,7 +97,7 @@ Though this model doesn't work at all when put to test inside the simulator envi
 
 ### Version 2
 
-The second idea is to randomize the background as well. So I find around ~300 background images and randomly display it in each frame. The backgrounds are also randomly rotated each time so it won't be the same. Here is the salient result:
+The second idea is to randomize the track color as well as the background. I used around ~300 background images and randomly display it in each frame. The backgrounds are also randomly rotated each time so it won't be the same. Here is the salient result:
 
 <img src="assets/vid_008.gif">
 
@@ -138,3 +138,5 @@ It seems its possible to create a universal model with enough dataset. And I thi
 ## Downloads
 
 You can download the models and the map here:
+
+https://github.com/JoeSiu/sdsandbox/tree/blog/training_models
