@@ -79,7 +79,7 @@ While the model isn't working as great, after comparing the real life footage to
 
 ## Simulator environment 2: Robocarstore standard track
 
-The second environment will be the Robocarstore's standard track, which I wish to test if it's possible to train a universal model which allows the donkey car to drive on this track under any environment.
+The second environment will be the Robocarstore's standard track, I want to test if it's possible to train a universal model which allows the donkey car to drive on this track under any environment.
 
 <img src="assets/robocarstore_standard_track.png" width="650" height="420"/>
 
