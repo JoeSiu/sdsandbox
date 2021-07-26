@@ -139,4 +139,4 @@ It seems its possible to create a universal model with enough dataset. And I thi
 
 You can download the models and the map here:
 
-https://github.com/JoeSiu/sdsandbox/tree/blog/training_models
+https://github.com/JoeSiu/sdsandbox/tree/gh-pages/training_models
