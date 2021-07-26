@@ -41,7 +41,7 @@ For this environment, I decided to create a simple model where the car would dri
 
 Before testing out the simulator model, I trained a real life version first for reference:
 
-|        Real life result         |            With salient map:            |
+|        Real life result         |            With salient map             |
 | :-----------------------------: | :-------------------------------------: |
 | <img src="assets/real_ref.gif"> | <img src="assets/real_ref_salient.gif"> |
 
