@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Set a random HDRI background if enabled
+/// </summary>
 public class RandomBackground : MonoBehaviour
 {
     public bool enable = true;
@@ -28,8 +30,10 @@ public class RandomBackground : MonoBehaviour
                 if (RenderSettings.skybox != HDRISky)
                     RenderSettings.skybox = HDRISky;
 
+                // Set random HDRI and a random rotation
                 RenderSettings.skybox.mainTexture = Skys[Random.Range(0, Skys.Count)];
                 RenderSettings.skybox.SetFloat("_Rotation", Random.Range(0, 360));
+                
                 yield return new WaitForSeconds(speed);
             }
             else

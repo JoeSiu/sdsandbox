@@ -39,12 +39,12 @@ EditorBuildSettings:
     path: Assets/Scenes/ironcar.unity
     guid: a945785e2aa7ea7468cfc040f2063ad8
   - enabled: 1
-    path: Assets/Scenes/robocars_standard_track.unity
+    path: Assets/Scenes/outdoor_area.unity
     guid: ed5e59c649af74133a19d3c34d8210f0
   - enabled: 1
     path: Assets/Scenes/generated_track_random_bg.unity
     guid: 6df567922f4c4414dabb2a423e51ccf0
   - enabled: 1
-    path: Assets/Scenes/robocars_standard_track_only.unity
+    path: Assets/Scenes/robocars_standard_track.unity
     guid: 28d996697b4de4bbe9e919c4f63eefc8
   m_configObjects: {}
